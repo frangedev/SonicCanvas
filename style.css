@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #111;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#controls {
+  margin-bottom: 20px;
+}
+
+#controls label, #controls p {
+  margin: 10px;
+  display: block;
+}
+
+#interface {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+#miniWindow {
+  border: 1px solid #fff;
+  background: #222;
+  width: 200px;
+  height: 150px;
+  position: absolute;
+  cursor: move;
+}
+
+#miniHeader {
+  background: #333;
+  padding: 5px;
+  font-size: 12px;
+}
+
+#miniCanvas {
+  width: 100%;
+  height: calc(100% - 30px);
+}
+
+.resize-handle {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: nwse-resize;
+}
+
+#notepad {
+  background: #222;
+  padding: 10px;
+  border: 1px solid #fff;
+}
+
+#scriptInput {
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 5px;
+}
+
+#runScript {
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+
+#canvasContainer {
+  display: flex;
+  justify-content: center;
+}

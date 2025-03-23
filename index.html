@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SonicCanvas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/addons/p5.sound.min.js"></script>
+</head>
+<body>
+    <h1>SonicCanvas</h1>
+    <div id="controls">
+        <label><input type="checkbox" id="micToggle"> Use Microphone</label>
+        <input type="file" id="audioInput" accept="audio/*">
+        <label>Particle Size: <input type="range" id="sizeSlider" min="5" max="50" value="15"></label>
+        <label>Swirl Intensity: <input type="range" id="swirlSlider" min="0" max="1" value="0.1" step="0.01"></label>
+        <p>Tempo: <span id="tempoDisplay">0 BPM</span></p>
+    </div>
+    <div id="interface">
+        <div id="miniWindow" class="draggable">
+            <div id="miniHeader">Projection Preview (Drag/Resize)</div>
+            <div id="miniCanvas"></div>
+            <div id="resizeHandle" class="resize-handle"></div>
+        </div>
+        <div id="notepad">
+            <h3>Animation Script</h3>
+            <textarea id="scriptInput" rows="10" cols="50">
+10 COLOR RED
+20 SIZE 20
+30 SWIRL 0.5
+40 GOTO 10
+            </textarea>
+            <button id="runScript">Run Script</button>
+        </div>
+    </div>
+    <div id="canvasContainer"></div>
+    <script src="sketch.js"></script>
+</body>
+</html>
